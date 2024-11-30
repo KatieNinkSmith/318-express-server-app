@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body id="signinsignup">
+    <nav>
+      <a href="http://localhost:3000/">HOME</a>
+      <a href="http://localhost:3000/viewposts">POSTS</a>
+    </nav>
+    <main>
+      <h1><%= title %></h1>
+      <p>Welcome to <%= title %></p>
+      <form action="signin">
+        <input type="text" value="Enter User Name" />
+        <br />
+        <input type="password" value="Enter Password" />
+        <br />
+        <button onclick="signin">Submit</button>
+      </form>
+      <br />
+      <form action="signup">
+        <input type="text" value="Enter User Name" />
+        <br />
+        <input type="password" value="Enter Password" />
+        <br />
+        <input type="number" min="13" placeholder="Enter your age" />
+        <br />
+        <input type="text" value="Favorite Color" />
+        <br />
+        <input type="text" value="Favorite Food" />
+        <br />
+        <input type="text" value="Favorite Hobby" />
+        <br />
+        <input type="text" value="Favorite Movie" />
+        <br />
+        <input type="text" value="Favorite Music" />
+        <br />
+        <button onclick="signup">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
