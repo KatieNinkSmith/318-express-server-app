@@ -1,0 +1,22 @@
+body {
+  min-height: 100vh;
+  background: url("https://media.istockphoto.com/id/471073179/photo/distressed-metal-surface.jpg?s=612x612&w=0&k=20&c=rMBXcOT9I6zVgt_HMBoWSEiAbV42JOVuU12WZpA5xxc=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f4a6a4;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+main {
+  margin: 50px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(93, 163, 153, 0.6);
+}
