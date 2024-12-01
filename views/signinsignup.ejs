@@ -5,39 +5,45 @@
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body id="signinsignup">
+    <header>
+      <h1><%= title %></h1>
+    </header>
     <nav>
       <a href="http://localhost:3000/">HOME</a>
       <a href="http://localhost:3000/viewposts">POSTS</a>
     </nav>
     <main>
-      <h1><%= title %></h1>
+      <br />
       <p>Welcome to <%= title %></p>
-      <form action="signin">
-        <input type="text" value="Enter User Name" />
+      <br />
+      <p>Sign In Here</p>
+      <form action="/signinsignup/submit/profile" method="get">
+        <input type="text" value="Enter User Name" required />
         <br />
-        <input type="password" value="Enter Password" />
+        <input type="password" value="Enter Password" required />
         <br />
-        <button onclick="signin">Submit</button>
+        <button>Submit</button>
       </form>
       <br />
-      <form action="signup">
-        <input type="text" value="Enter User Name" />
+      <p>Sign Up Here</p>
+      <form action="/signinsignup/submit/profile" method="post">
+        <input type="text" name="user" value="Enter User Name" required />
         <br />
-        <input type="password" value="Enter Password" />
+        <input type="password" value="Enter Password" required />
         <br />
-        <input type="number" min="13" placeholder="Enter your age" />
+        <input type="number" min="13" placeholder="Enter your age" required />
         <br />
-        <input type="text" value="Favorite Color" />
+        <input type="text" name="color" value="Favorite Color" />
         <br />
-        <input type="text" value="Favorite Food" />
+        <input type="text" name="food" value="Favorite Food" />
         <br />
-        <input type="text" value="Favorite Hobby" />
+        <input type="text" name="hobby" value="Favorite Hobby" />
         <br />
-        <input type="text" value="Favorite Movie" />
+        <input type="text" name="movie" value="Favorite Movie" />
         <br />
-        <input type="text" value="Favorite Music" />
+        <input type="text" name="music" value="Favorite Music" />
         <br />
-        <button onclick="signup">Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </main>
   </body>

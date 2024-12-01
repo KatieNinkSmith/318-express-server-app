@@ -1,8 +1,11 @@
 const express = require("express");
 const router = express.Router();
-// localhost:3000/hoilday
-router.get("/", (req, res) => {
-  res.render("index", { title: "Hobby Home" });
+const users = require("../data/users.js");
+// console.log(users);
+// localhost:3000/
+
+router.route("/").get((req, res) => {
+  res.render("index", { users, title: "Hobby Home" });
 });
 
 // redirect to user sign up/sign in

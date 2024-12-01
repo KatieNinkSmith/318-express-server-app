@@ -50,3 +50,86 @@ Include a practical usage of regular expressions within route paths. (regular ex
 Note: A forced, arbitrary usage of this technique will not earn you any bonus credit. This must be practical and sensible in order to be considered for credit.
 Research and effectively use at least one third-party Node package for practical, sensible purposes.
 This cannot be a package that has been used in examples and lesson materials thus far. Step outside the box and be creative!
+
+// from Davon
+const logRequestData = (req, res, next) => {
+console.log(
+`${req.method} request made to ${req.url} at ${new Date().toISOString()}`
+);
+next(); // Call next() to pass control to the next middleware/route handler
+};
+app.use(logRequestData);
+
+// from Hema
+
+const comments = require("../data/comments");
+res.render("comments",{ comments });
+
+stuff that doesnt work
+// app.put("/", async (req, res) => {
+// try {
+// // Update the item in the database
+// const updatedUser = await Item.findByIdAndUpdate(req.params.id, req.body, {
+// new: true,
+// });
+// res.send(updatedUser);
+// } catch {
+// console.log("Error updating data in DB:", err);
+// res.send("Error updating data");
+// }
+// });
+
+// app.get("/user", (req, res) => {
+// res.send(req.params.user);
+// });
+// app.get("/posts/:id", (req, res) => {
+// res.send(req.params.post_id);
+// });
+// app.get("/post/:id/:comments", (req, res) => {
+// res.send(req.params.params);
+// });
+// app.put("/:post", (req, res) => {
+// req.send(res.params);
+// });
+// app.put("/:comments", (req, res) => {
+// req.send(res.params);
+// });
+// render profile info
+const profile = {
+user: userData.user,
+color: userData.color,
+food: userData.food,
+hobby: userData.hobby,
+movie: userData.movie,
+music: userData.music,
+};
+
+router.post("/", (req, res) => {
+// update user data
+res.render(
+userData.user = `<h1>Welcome ${req.body.user}</h1>`,
+userData.color = `<p>Favorite color ${req.body.color}</p>`,
+userData.food = `<p>Favorite food ${req.body.food}</p>`,
+userData.hobby = `<p>Favorite hobby ${req.body.hobby}</p>`,
+userData.movie = `<p>Favorite movie ${req.body.movie}</p>`,
+userData.music = `<p>Favorite music ${req.body.music}</p>`);
+});
+
+// router.get("/", (req, res) => {
+// res.render("index", { title: "Hobby Home" });
+// });
+// router.get("/", (req, res) => {
+// res.render("index", { users });
+// });
+// brings the data to my index page
+// app.get("/", (req, res) => {
+// // Pass the fetched data to the view
+// res.render("index", { userData });
+// });
+// const logRequestData = (req, res, next) => {
+// console.log(
+// `${req.method} request made to ${req.url} at ${new Date().toISOString()}`
+// );
+// next(); // Call next() to pass control to the next middleware/route handler
+// };
+// app.use(logRequestData);
