@@ -133,3 +133,78 @@ userData.music = `<p>Favorite music ${req.body.music}</p>`);
 // next(); // Call next() to pass control to the next middleware/route handler
 // };
 // app.use(logRequestData);
+router.post("/", (req, res) => {
+const { user, color, food, hobby, movie, music } = req.body;
+console.log(
+user.value,
+color.value,
+food.value,
+hobby.value,
+movie.value,
+music.value
+);
+res.render("/submit/profile");
+});
+|| user.color === color || user.food === food || user.hobby === hobby || user.movie === movie || user.music === music
+// const { user, color, food, hobby, movie, music } = req.params;
+// console.log(user, "banana");
+
+// console.log(userData);
+// const newUser = req.params.user;
+// router.post("/submit", (req, res) => {
+// res.render(
+// "profile",
+// (user.value, color.value, food.value, hobby.value, movie.value, music.value)
+// );
+// });
+// router.get("/", (req, res) => {
+// // change your profile to the user's name and only display their info cased on name entered in sign in input
+// res.render("profile", { users, title: users.user });
+// });
+// const userExists = userData.some(
+// (existingUser) => existingUser.user === user
+// );
+// if (userExists) {
+// return res.render("signinsignup", {
+// message: "User already exists",
+// error: true,
+// });
+// }
+// console.log("your a banana");
+// console.log(req.query);
+// const formData = getDataForForm();
+// console.log(formData);
+// console.log(req.body);
+// const noUser = userData.some((user) => user.user !== user);
+// console.log(noUser);
+// if (noUser) {
+// res.render("signinsignup", {
+// message: "User does not exist. Please sign up!",
+// error: true,
+// });
+// }
+// const userExists = userData.some(
+// (existingUser) => existingUser.user === user
+// );
+// else {
+// res.redirect(`/profile/${user}`);
+// }
+
+---
+
+WORKING AND MOVED TO CORRECT route
+// // Route to display the profile page
+// app.get("/profile/:user", (req, res) => {
+// console.log(req.params.user);
+// const userdata = userData.find((user) => user.user === req.params.user);
+// console.log(userdata);
+// // Render the profile page with the user's data
+// res.render("profile", {
+// user: userdata.user,
+// color: userdata.color,
+// food: userdata.food,
+// hobby: userdata.hobby,
+// movie: userdata.movie,
+// music: userdata.music,
+// });
+// });

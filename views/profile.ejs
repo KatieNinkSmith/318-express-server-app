@@ -22,6 +22,7 @@
           <br />
           Favroite color: <%= color %>
           <br />
+          <br />
           <p>Favorite food: <%= food %></p>
           <br />
           <p>Favorite hobby: <%= hobby %></p>
@@ -30,7 +31,10 @@
           <br />
           <p>Favorite music: <%= music %></p>
         </li>
-        <button>Edit your profile</button>
+        <form action="/delete" method="DELETE">
+          <input type="hidden" name="username" value="<%= user %>" />
+          <button type="submit">Delete your profile</button>
+        </form>
       </ul>
     </main>
   </body>

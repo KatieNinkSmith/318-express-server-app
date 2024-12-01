@@ -1,8 +1,6 @@
 const users = [
   {
-    id: 1,
     user: "Alice Green",
-    age: 28,
     color: "Blue",
     food: "Pizza",
     hobby: "Painting",
@@ -10,9 +8,7 @@ const users = [
     music: "Indie Rock",
   },
   {
-    id: 2,
     user: "John Doe",
-    age: 35,
     color: "Red",
     food: "Sushi",
     hobby: "Hiking",
@@ -20,9 +16,7 @@ const users = [
     music: "Electronic",
   },
   {
-    id: 3,
     user: "Emily Brown",
-    age: 24,
     color: "Green",
     food: "Burgers",
     hobby: "Yoga",
@@ -30,9 +24,7 @@ const users = [
     music: "Jazz",
   },
   {
-    id: 4,
     user: "Michael Smith",
-    age: 42,
     color: "Black",
     food: "Pasta",
     hobby: "Reading",
@@ -40,9 +32,7 @@ const users = [
     music: "Classical",
   },
   {
-    id: 5,
     user: "Olivia Johnson",
-    age: 31,
     color: "Yellow",
     food: "Ice Cream",
     hobby: "Traveling",
@@ -50,9 +40,7 @@ const users = [
     music: "Pop",
   },
   {
-    id: 6,
     user: "David Wilson",
-    age: 27,
     color: "Purple",
     food: "Rice",
     hobby: "Gardening",
@@ -60,9 +48,7 @@ const users = [
     music: "Rock",
   },
   {
-    id: 7,
     user: "Sophia Williams",
-    age: 33,
     color: "White",
     food: "Salad",
     hobby: "Photography",

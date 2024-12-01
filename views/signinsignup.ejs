@@ -6,7 +6,7 @@
   </head>
   <body id="signinsignup">
     <header>
-      <h1></h1>
+      <h1>Hobby Home</h1>
     </header>
     <nav>
       <a href="http://localhost:3000/">HOME</a>
@@ -14,16 +14,19 @@
     </nav>
     <main>
       <br />
-      <p>Welcome to</p>
+      <p>Welcome</p>
       <br />
 
       <p>Sign In Here</p>
-      <form action="/signin" method="get">
+      <form action="/signin" method="GET">
         <input type="text" name="user" placeholder="Enter User Name" required />
         <br />
         <input type="password" placeholder="Enter Password" required />
         <br />
-        <button>Submit</button>
+        <button type="submit">Submit</button>
+        <% if (typeof message !== 'undefined') { %>
+        <p style="color: <%= error ? 'red' : 'green' %>;"><%= message %></p>
+        <% } %>
       </form>
       <br />
       <p>Sign Up Here</p>

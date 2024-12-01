@@ -1,19 +1,31 @@
 const express = require("express");
 const router = express.Router();
+const userData = require("../data/users.js");
 // localhost:3000/profile
-const users = require("../data/users.js");
 // console.log(userData);
-router.get("/", (req, res) => {
-  // change your profile to the user's name and only display their info cased on name entered in sign in input
-  res.render("profile", { users, title: users.user });
-});
 
-// router.post("/submit", (req, res) => {
-//   res.render(
-//     "profile",
-//     (user.value, color.value, food.value, hobby.value, movie.value, music.value)
-//   );
-// });
+router.get("/:user", (req, res) => {
+  // console.log(req.params.user, "i like to eat apples and bananas");
+  const userdata = userData.find((user) => user.user === req.params.user);
+  // console.log(userdata);
+  // Render the profile page with the user's data
+  res.render("profile", {
+    user: userdata.user,
+    color: userdata.color,
+    food: userdata.food,
+    hobby: userdata.hobby,
+    movie: userdata.movie,
+    music: userdata.music,
+  });
+});
+router.delete("/", (req, res) => {
+  const index = userData.findIndex((user) => user.user === user);
+  console.log(index);
+
+  userData.splice(index, 1);
+  console.log(userData);
+  res.send("User deleted successfully");
+});
 // render only your posts
 // render other users post with only "your" comments
 // options to edit your profile only
