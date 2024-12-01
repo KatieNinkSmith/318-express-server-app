@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><%= title %></title>
+    <title></title>
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body id="profile">
@@ -15,21 +15,22 @@
     <main>
       <!-- only show one use based on username in signin -->
 
-      <p>Welcome <%= title %></p>
+      <p>Welcome</p>
       <ul id="userProfile">
-        <% users.forEach(user => { %>
         <li>
-          <h1><%= user.user %></h1>
+          <h1><%= user %></h1>
           <br />
-          Favroite color: <%= user.color %>
+          Favroite color: <%= color %>
           <br />
-          Favorite food: <%= user.food %> <br />
-          Favorite hobby: <%= user.hobby %> <br />
-          Favorite movie: <%= user.movie %> <br />
-          Favorite music: <%= user.music %>
+          <p>Favorite food: <%= food %></p>
+          <br />
+          <p>Favorite hobby: <%= hobby %></p>
+          <br />
+          <p>Favorite movie: <%= movie %></p>
+          <br />
+          <p>Favorite music: <%= music %></p>
         </li>
         <button>Edit your profile</button>
-        <% }) %>
       </ul>
     </main>
   </body>

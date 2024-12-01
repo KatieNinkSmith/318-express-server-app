@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><%= title %></title>
+    <title></title>
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body id="signinsignup">
     <header>
-      <h1><%= title %></h1>
+      <h1></h1>
     </header>
     <nav>
       <a href="http://localhost:3000/">HOME</a>
@@ -14,36 +14,40 @@
     </nav>
     <main>
       <br />
-      <p>Welcome to <%= title %></p>
+      <p>Welcome to</p>
       <br />
+
       <p>Sign In Here</p>
-      <form action="/signinsignup/submit/profile" method="get">
-        <input type="text" value="Enter User Name" required />
+      <form action="/signin" method="get">
+        <input type="text" name="user" placeholder="Enter User Name" required />
         <br />
-        <input type="password" value="Enter Password" required />
+        <input type="password" placeholder="Enter Password" required />
         <br />
         <button>Submit</button>
       </form>
       <br />
       <p>Sign Up Here</p>
-      <form action="/signinsignup/submit/profile" method="post">
-        <input type="text" name="user" value="Enter User Name" required />
+      <form action="/register" method="post">
+        <input type="text" name="user" placeholder="Enter User Name" required />
         <br />
-        <input type="password" value="Enter Password" required />
+        <input type="password" placeholder="Enter Password" required />
         <br />
         <input type="number" min="13" placeholder="Enter your age" required />
         <br />
-        <input type="text" name="color" value="Favorite Color" />
+        <input type="text" name="color" placeholder="Favorite Color" />
         <br />
-        <input type="text" name="food" value="Favorite Food" />
+        <input type="text" name="food" placeholder="Favorite Food" />
         <br />
-        <input type="text" name="hobby" value="Favorite Hobby" />
+        <input type="text" name="hobby" placeholder="Favorite Hobby" />
         <br />
-        <input type="text" name="movie" value="Favorite Movie" />
+        <input type="text" name="movie" placeholder="Favorite Movie" />
         <br />
-        <input type="text" name="music" value="Favorite Music" />
+        <input type="text" name="music" placeholder="Favorite Music" />
         <br />
         <button type="submit">Submit</button>
+        <% if (typeof message !== 'undefined') { %>
+        <p style="color: <%= error ? 'red' : 'green' %>;"><%= message %></p>
+        <% } %>
       </form>
     </main>
   </body>

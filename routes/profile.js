@@ -7,12 +7,13 @@ router.get("/", (req, res) => {
   // change your profile to the user's name and only display their info cased on name entered in sign in input
   res.render("profile", { users, title: users.user });
 });
-router.post("/submit", (req, res) => {
-  res.render(
-    "profile",
-    (user.value, color.value, food.value, hobby.value, movie.value, music.value)
-  );
-});
+
+// router.post("/submit", (req, res) => {
+//   res.render(
+//     "profile",
+//     (user.value, color.value, food.value, hobby.value, movie.value, music.value)
+//   );
+// });
 // render only your posts
 // render other users post with only "your" comments
 // options to edit your profile only
