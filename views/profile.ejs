@@ -18,24 +18,94 @@
       <p>Welcome</p>
       <ul id="userProfile">
         <li>
+          <form action="/profile/?_method=PATCH" method="POST">
           <h1><%= user %></h1>
           <br />
+          <input
+          class="hidden"
+          type="text"
+          name="user"
+          placeholder="Please enter name to confirm change"
+          style="visibility: hidden"
+          required
+        />
+          <br />
           Favroite color: <%= color %>
+          <br />
+          <input
+            class="hidden"
+            type="text"
+            name="color"
+            placeholder="Enter new color"
+            style="visibility: hidden"
+          />
           <br />
           <br />
           <p>Favorite food: <%= food %></p>
           <br />
+          <input
+            class="hidden"
+            type="text"
+            name="food"
+            placeholder="Enter new food"
+            style="visibility: hidden"
+          />
+          <br />
           <p>Favorite hobby: <%= hobby %></p>
+          <br />
+          <input
+            class="hidden"
+            type="text"
+            name="hoddy"
+            placeholder="Enter new hoddy"
+            style="visibility: hidden"
+          />
           <br />
           <p>Favorite movie: <%= movie %></p>
           <br />
+          <input
+            class="hidden"
+            type="text"
+            name="movie"
+            placeholder="Enter new movie"
+            style="visibility: hidden"
+          />
+          <br />
           <p>Favorite music: <%= music %></p>
+          <br />
+          <input
+            class="hidden"
+            type="text"
+            name="music"
+            placeholder="Enter new music"
+            style="visibility: hidden"
+          />
         </li>
-        <form action="/delete" method="DELETE">
+          <button class="hidden" type="submit" style="visibility: hidden">
+            Submit changes
+          </button>
+        </form>
+        <button id="visBtn">Edit your profile</button>
+        <form action="/profile/?_method=DELETE" method="POST">
           <input type="hidden" name="username" value="<%= user %>" />
           <button type="submit">Delete your profile</button>
         </form>
       </ul>
     </main>
+    <script>
+      const visBtn = document.getElementById("visBtn");
+      // console.log(visBtn);
+      const hidItems = document.getElementsByClassName("hidden");
+      // console.log(hidItems);
+      visBtn.onclick = toggleVisibility;
+      function toggleVisibility() {
+        for (let i = 0; i < hidItems.length; i++) {
+          console.log(hidItems[i]);
+          if (hidItems[i].style.visibility === "hidden") {
+            hidItems[i].style.visibility = "visible";
+          }
+        }
+      }
+    </script>
   </body>
 </html>

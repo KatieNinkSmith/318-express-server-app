@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 const fs = require("fs");
+const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
 const userData = require("./data/users.js");
 const postData = require("./data/post.js");
@@ -11,20 +12,7 @@ const signupRouter = require("./routes/signinSignup.js");
 const viewpostsRouter = require("./routes/viewPosts.js");
 const profileRouter = require("./routes/profile.js");
 
-const path = require("path");
-const usersFilePath = path.join(__dirname, "../data/users.js");
-
-// To read data from file
-const readUsers = () => {
-  delete require.cache[require.resolve(usersFilePath)];
-  return require(usersFilePath);
-};
-
-// To write data from file
-const writeUsers = (users) => {
-  const usersContent = `const users = ${JSON.stringify(users, null, 4)}`;
-  fs.writeFileSync(usersFilePath, usersContent, "utf8");
-};
+//
 
 // middleware
 app.use((req, res, next) => {
@@ -38,6 +26,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(methodOverride("_method"));
 app.use("/", indexRouter);
 app.use("/signupsignin", signupRouter);
 app.use("/viewposts", viewpostsRouter);
@@ -45,21 +34,19 @@ app.use("/profile", profileRouter);
 // console.log(userIdCounter);
 // Route to handle form submission
 app.post("/register", (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
+  // rewrite to "user: req.body.user" and so on then console.log
   const { user, color, food, hobby, movie, music } = req.body;
-
   // Check if the username or email already exists in the hardcoded data
   const userExists = userData.some(
     (existingUser) => existingUser.user === user
   );
-
   if (userExists) {
     return res.render("signinsignup", {
       message: "User already exists",
       error: true,
     });
   }
-
   // Add new user to the array (simulating user registration)
   const newUser = {
     user: user,
@@ -70,8 +57,8 @@ app.post("/register", (req, res) => {
     music: music,
   };
   userData.push(newUser);
-  console.log(userData);
-  console.log(user);
+  // console.log(userData);
+  // console.log(user);
   // Redirect to the profile page with the user's information
   res.redirect(`/profile/${user}`);
 });

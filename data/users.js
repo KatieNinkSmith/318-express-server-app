@@ -1,6 +1,6 @@
 const users = [
   {
-    user: "Alice Green",
+    user: "Adam Green",
     color: "Blue",
     food: "Pizza",
     hobby: "Painting",
@@ -8,7 +8,7 @@ const users = [
     music: "Indie Rock",
   },
   {
-    user: "John Doe",
+    user: "Davon Doe",
     color: "Red",
     food: "Sushi",
     hobby: "Hiking",
@@ -16,7 +16,7 @@ const users = [
     music: "Electronic",
   },
   {
-    user: "Emily Brown",
+    user: "Christopher Orange",
     color: "Green",
     food: "Burgers",
     hobby: "Yoga",
@@ -24,7 +24,7 @@ const users = [
     music: "Jazz",
   },
   {
-    user: "Michael Smith",
+    user: "Nicholas Smith",
     color: "Black",
     food: "Pasta",
     hobby: "Reading",
@@ -32,7 +32,7 @@ const users = [
     music: "Classical",
   },
   {
-    user: "Olivia Johnson",
+    user: "Hema Johnson",
     color: "Yellow",
     food: "Ice Cream",
     hobby: "Traveling",
@@ -40,7 +40,7 @@ const users = [
     music: "Pop",
   },
   {
-    user: "David Wilson",
+    user: "Katie Wilson",
     color: "Purple",
     food: "Rice",
     hobby: "Gardening",
@@ -48,12 +48,20 @@ const users = [
     music: "Rock",
   },
   {
-    user: "Sophia Williams",
+    user: "Phillip Williams",
     color: "White",
     food: "Salad",
     hobby: "Photography",
     movie: "The Godfather",
     music: "Folk",
+  },
+  {
+    user: "Fatou Brown",
+    color: "Brown",
+    food: "Steak",
+    hobby: "Cooking",
+    movie: "The Dark Knight",
+    music: "Pop",
   },
 ];
 

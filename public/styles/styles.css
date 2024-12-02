@@ -49,7 +49,7 @@ nav a {
   background-color: rgba(203, 197, 243, 0.6);
 }
 #scrollContainer {
-  width: 100%;
+  width: 100vw;
   border: 3px solid #f29f2c;
   border-radius: 5px;
   overflow: hidden;
