@@ -15,12 +15,12 @@
     <main>
       <br />
       <p>Make A New Post</p>
-      <form action="submit" method="POST">
+      <form action="/compose" method="POST">
         <input type="text" name="title" placeholder="Title" />
         <br />
-        <textarea name="" id=""></textarea>
+        <textarea name="content" id=""></textarea>
         <br />
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
       <div id="posts">
         <% posts.forEach(posts => { %>
@@ -29,7 +29,7 @@
           <br />
           <%= posts.content %>
         </p>
-        <button>Edit post</button>
+        <button onclick="toggleVisibilty">Veiw comments</button>
         <% }) %>
       </div>
     </main>

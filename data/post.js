@@ -47,55 +47,6 @@ const posts = [
     title: "The Importance of Gratitude",
     content: "The importance of physical and physical",
   },
-  {
-    id: 8,
-    user_id: 1,
-    title: "The Role of Music in Our Lives",
-    content:
-      "Music can help me relax and unwind. It’s a beautiful part of my life.",
-  },
-  {
-    id: 9,
-    user_id: 2,
-    title: "The Best Food in the City",
-    content:
-      "I love trying new and delicious food. I've been to many great restaurants.",
-  },
-  {
-    id: 10,
-    user_id: 3,
-    title: "The Power of Wisdom",
-    content:
-      "Wisdom can help me understand and appreciate the world around me.",
-  },
-  {
-    id: 11,
-    user_id: 4,
-    title: "The Beauty of Architecture",
-    content:
-      "Architecture is a beautiful way to express our values and ideas. I love it!",
-  },
-  {
-    id: 12,
-    user_id: 5,
-    title: "The Importance of Sleep",
-    content:
-      "Sleep is essential for maintaining good health and well-being. It's a part of my daily routine.",
-  },
-  {
-    id: 13,
-    user_id: 6,
-    title: "The Power of Positive Thinking",
-    content:
-      "Positive thinking can help me find solutions to problems and improve my life.",
-  },
-  {
-    id: 14,
-    user_id: 7,
-    title: "The Power of Decision-Making",
-    content:
-      "Decision-making can help me make informed choices and improve my overall well-being.",
-  },
 ];
 
 module.exports = posts;

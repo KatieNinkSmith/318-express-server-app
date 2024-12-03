@@ -1,5 +1,6 @@
 const users = [
   {
+    id: 1,
     user: "Adam Green",
     color: "Blue",
     food: "Pizza",
@@ -8,6 +9,7 @@ const users = [
     music: "Indie Rock",
   },
   {
+    id: 2,
     user: "Davon Doe",
     color: "Red",
     food: "Sushi",
@@ -16,6 +18,7 @@ const users = [
     music: "Electronic",
   },
   {
+    id: 3,
     user: "Christopher Orange",
     color: "Green",
     food: "Burgers",
@@ -24,6 +27,7 @@ const users = [
     music: "Jazz",
   },
   {
+    id: 4,
     user: "Nicholas Smith",
     color: "Black",
     food: "Pasta",
@@ -32,6 +36,7 @@ const users = [
     music: "Classical",
   },
   {
+    id: 5,
     user: "Hema Johnson",
     color: "Yellow",
     food: "Ice Cream",
@@ -40,6 +45,7 @@ const users = [
     music: "Pop",
   },
   {
+    id: 6,
     user: "Katie Wilson",
     color: "Purple",
     food: "Rice",
@@ -48,6 +54,7 @@ const users = [
     music: "Rock",
   },
   {
+    id: 7,
     user: "Phillip Williams",
     color: "White",
     food: "Salad",
@@ -56,6 +63,7 @@ const users = [
     music: "Folk",
   },
   {
+    id: 8,
     user: "Fatou Brown",
     color: "Brown",
     food: "Steak",

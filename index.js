@@ -9,7 +9,7 @@ const postData = require("./data/post.js");
 const commentsData = require("./data/comments.js");
 const indexRouter = require("./routes/index.js");
 const signupRouter = require("./routes/signinSignup.js");
-const viewpostsRouter = require("./routes/viewPosts.js");
+const viewpostsRouter = require("./routes/viewposts.js");
 const profileRouter = require("./routes/profile.js");
 
 //
@@ -77,7 +77,23 @@ app.get("/signin", (req, res) => {
 
   // console.log(user);
 });
+app.post("/compose", (req, res) => {
+  const { id, user_id, title, content } = req.body;
+  console.log(req.body);
+  for (i = 0; i < postData.length; i++) {
+    console.log(postData[i]);
+  }
 
+  const newPost = {
+    id: " ",
+    user_id: " ",
+    title: title,
+    content: content,
+  };
+  console.log(newPost);
+  postData.push(newPost);
+  res.redirect("/viewposts");
+});
 // 404 error
 app.use((req, res) => {
   console.log("Error: Oh no my table its broken!");
